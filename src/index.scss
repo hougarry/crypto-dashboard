@@ -1,0 +1,75 @@
+:root{
+    --color-background: #1482DA; /* 60% */
+    --color-primary: #7992BC ; 
+    --color-secondary: #F4F9FF; 
+    --color-accent: #E6F4F1; /* 10% */
+}
+body {
+    background-color: var(--color-background);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-feed {
+    background-color: var(--color-secondary);
+    border-radius: 15px;
+
+    p{
+        color: black;
+    }
+}
+
+.currency-converter {
+    background-color: var(--color-accent);
+    padding: 1rem;
+    margin: 5px;
+    box-shadow: 0 3px 10px var(--color-primary) ;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--color-background);
+}
+.exchange-rate {
+    background-color: var(--color-primary);
+    padding: 15px;
+    margin-top: 12px;
+    box-shadow: 0 3px 10px var(--color-primary);
+    border-radius: 15px;
+}
+
+
+.input-box{
+    background-color: var(--color-secondary);
+    padding: 30px;
+    border-radius: 15px;
+    input, select{
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        border: 1px solid var(--color-primary);
+        border-radius: 5px;
+        float: right;
+        font-family: "roboto", sans-serif;
+        &:hover{
+            cursor: pointer;
+            background-color: var(--color-accent);
+        }
+    }
+}

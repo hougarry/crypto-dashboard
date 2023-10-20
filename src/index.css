@@ -1,0 +1,78 @@
+:root {
+  --color-primary: #1482DA; /* 60% */
+  --color-secondary: #E0EEEC ;
+  --color-accent: #3F8A85F;
+}
+
+body {
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .app-wrapper{
+    display: flex;
+  }
+}
+
+.news-feed {
+  background-color: var(--color-secondary);
+  box-shadow: var(--color-primary) 0 3px 10px;
+  border-radius: 15px;
+  .news-feed p {
+    color: var(--color-primary);
+  }
+}
+
+
+.currency-converter {
+  background-color: var(--color-secondary);
+  padding: 1rem;
+  margin: 5px;
+  box-shadow: 0 3px 10px var(--color-primary);
+  border-radius: 15px;
+  text-align: center;
+  color: var(--color-background);
+}
+
+.exchange-rate {
+  background-color: var(--color-primary);
+  padding: 15px;
+  margin-top: 12px;
+  box-shadow: 0 3px 10px var(--color-primary);
+  border-radius: 15px;
+}
+
+.input-box {
+  background-color: var(--color-secondary);
+  padding: 30px;
+  border-radius: 15px;
+}
+.input-box input, .input-box select {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+.input-box input:focus, .input-box select:focus {
+  outline: none;
+}
+.input-box button {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  float: right;
+  font-family: "roboto", sans-serif;
+}
+.input-box button:hover {
+  cursor: pointer;
+  background-color: var(--color-accent);
+}/*# sourceMappingURL=index.css.map */
