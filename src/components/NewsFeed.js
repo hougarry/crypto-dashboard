@@ -11,7 +11,7 @@ const NewsFeed = () => {
         const fetchData = async () => {
             const options = {
                 method: 'GET',
-                url: 'http://localhost:8000/news'
+                url: 'http://localhost:4000/news'
 
             }
 
