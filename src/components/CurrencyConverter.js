@@ -26,7 +26,7 @@ const CurrencyConverter =  () => {
 
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/convert',
+            url: 'http://localhost:4000/convert',
             params: {
                 from_currency: chosenPrimaryCurrency,
                 function: 'CURRENCY_EXCHANGE_RATE',
