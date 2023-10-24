@@ -2,7 +2,6 @@
   "name": "crypto-dashboard",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -22,7 +21,6 @@
     "start:backend": "nodemon backend.js",
     "start:frontend": "react-scripts start",
     "start:both": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "deploy": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
