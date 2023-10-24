@@ -17,6 +17,24 @@ only left function App() in app.js
 delete the logo part in index.js
 keep not use ; in the end of each line
 
+# Create
+
+npx create-react-app crypto-dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### create components files
  newsfee.js
 cryptocurrencies.js
@@ -325,3 +343,36 @@ Here are some steps to troubleshoot and potentially resolve the issue:
    ```
 
 
+## Fontend and backend cannot connect
+
+1. **Update the Frontend Axios Requests:**
+
+   In your frontend code, wherever you're making Axios requests to your backend (e.g., `localhost:4000/news`), you'll need to update the base URL from `localhost:4000` to the actual IP address of your VPS (or preferably a domain name if you have one). 
+
+   For instance, if you have an Axios instance or a base URL setup like:
+   ```javascript
+   axios.defaults.baseURL = 'http://localhost:4000';
+   ```
+
+   Update it to:
+   ```javascript
+   axios.defaults.baseURL = 'http://159.223.207.23:4000';
+   ```
+
+2. **CORS Configuration:**
+
+   Ensure that your CORS middleware in the backend is correctly set up to allow requests from the frontend. Currently, you're allowing all origins, which is fine for development, but for production, you might want to restrict it to specific domains or IP addresses.
+
+3. **Environment Variables:**
+
+   If you're using environment variables in your frontend code (like `REACT_APP_RAPID_API_KEY`), ensure those are correctly set up on your VPS. The frontend build process might need those during the build phase.
+
+4. **Proxy Setting in package.json:**
+
+   If you're using the `proxy` setting in your frontend's `package.json` (like `"proxy": "http://localhost:4000"`), this is used during development only. It does not affect the production build. Once you deploy, this setting is irrelevant, and you'll need to specify the full URL in your Axios requests or set a base URL as described above.
+
+5. **Use Environment Variables for Dynamic Configuration:**
+
+   Instead of hardcoding the IP address, it's a good practice to use environment variables or a configuration file. This way, you can have different settings for development, staging, and production environments without changing the code.
+
+To summarize, the main thing you need to do is update your frontend's Axios calls to point to the actual IP address of the VPS (or domain name) instead of `localhost`.
