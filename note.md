@@ -312,7 +312,7 @@ Here are some steps to troubleshoot and potentially resolve the issue:
    With:
 
    ```javascript
-   url: 'http://localhost:8000/convert',
+   url: 'http://localhost:4000/convert',
    ```
 
 4. **Error Handling**: In your backend's `/convert` route, you're catching errors but not sending any response back to the frontend in case of an error. This can lead to the frontend hanging indefinitely. Update your error handling to send back a response:
